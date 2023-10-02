@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .toggle {
+    @apply w-9 bg-[#120B48] h-5 rounded-xl relative after:absolute flex items-center cursor-pointer after:w-4 after:h-4 after:bg-white after:rounded-full after:left-auto after:right-[2px] p-[2px] transition after:transition-all after:duration-700 after:ease-in-out;
+  }
+  .toggle[data-allow="false"] {
+    @apply bg-[#928FAB] after:left-[2px] after:right-auto;
+  }
+  .display_btn {
+    @apply flex flex-col items-center gap-2 transition cursor-pointer hover:text-[#120B48] text-[#928FAB] font-medium;
+  }
+  .display_btn[data-selected="true"] {
+    @apply text-[#120b48] font-semibold;
+  }
+  .display_btn > svg {
+    stroke: inherit;
+  }
+}
